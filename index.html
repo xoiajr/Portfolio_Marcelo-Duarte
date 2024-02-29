@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelo Portfolio </title>
+    <link rel="website icon" type="png" 
+    href="images/icon.png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b06a64126b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/17a4ab0a51.js" crossorigin="anonymous"></script>
+    <script src="portfolio_photographer.js"></script>
+    <link rel="stylesheet" href="google sheets.js">
+</head>
+<body>
+
+        <!--Criar um botão de voltar para cima-->
+        <button id="scrollToTopBtn" onclick="scrollToTop()">
+            <h5>↑</h5>
+        </button>
+        
+    <script>
+        // Função para rolar até o topo da página
+        function scrollToTop() {
+            document.body.scrollTop = 0;  // Para navegadores mais antigos
+            document.documentElement.scrollTop = 0;  // Para navegadores modernos
+        }
+
+        // Mostra ou esconde o botão dependendo da posição do scroll
+        window.onscroll = function() {
+            showScrollToTopButton();
+        };
+
+        function showScrollToTopButton() {
+            var btn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+    </script>
+
+
+<!--Criar o site-->
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <!--<li><a href="#services">Services</a></li>-->
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Graphic Designer</p>
+            <h1>Hi, I'm <span>Marcelo Duarte</span><br> From Cape Verde</h1>
+        </div>
+    </div>
+</div>
+<!-- ----------about------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, I'm Marcelo Duarte, a talented graphic designer and filmmaker with over 3 years of experience. I'm from Cape Verde and I'm passionate about art, design and telling stories through cinema.
+                <br>
+                <br>Throughout my career, I have had the opportunity to work on a variety of creative projects, ranging from logo and visual identity design to video and film production.  <br>I believe in the importance of transmitting a clear and impactful message through visual and audiovisual media.
+                <br>I use the latest design and video editing tools and software to create unique, high-quality pieces. My goal is to exceed my clients' expectations by delivering work that communicates effectively and emotionally.
+                <br>
+                <br>On this site you will find a selection of my best work, which demonstrates my style and skills. I invite you to explore my portfolio and delve into the visual and cinematic world I create.
+                If you are looking for a passionate and committed graphic designer and filmmaker, I am ready to collaborate on exciting projects. Get in touch to discuss how we can work together and create something amazing.</p>
+                <!--<a href="about_learnmore.html"><button type="button">Learn more</button></a>-->
+                
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <table>
+                            <tr style="background-color: #fd8505; color: #fff;">
+                                <th>Graphic Design</th>
+                                <th>Video Maker</th>
+                                <th>Photography</th>
+                            </tr>
+                            <tr>
+                                <td>Branding, Layout Design, Image Editing, Vector Graphics</td>
+                                <td>Video Editing, Video Production, Video Marker</td>
+                                <td>Publication Design, Social Media Graphic, Portfolio Design, Photo Editing, Image Retouching, Color Correction</td>
+                            </tr>
+                        </table>
+                        <!--<ul>
+                            <li><span>Graphic Design</span><br>Branding, Layout Design, Image Editing, Vector Graphics</li>
+                            <li><span>Video Maker</span><br>Video Editing, Video Production, Video Marker</li>
+                            <li><span>Photography</span><br>Publication Design, Social Media Graphic, Portfolio Design, Photo Editing, Image Retouching, Color Correction</li>
+                        </ul>-->
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <table>
+                            <tr style="background-color: #fd8505; color: #fff;">
+                              <th>Year</th>
+                              <th>Office</th>
+                              <th>Employer</th>
+                              <th>Location</th>
+                              <th>Country</th>
+                            </tr>
+                            <tr>
+                              <td>2023 - Current</td>
+                              <td>Collaborator at the School of Communication library</td>
+                              <td>EsAcT-IPB</td>
+                              <td>Campus do Cruzeiro, Av. 25 de Abril Lote 2, 5370-202 Mirandela</td>
+                              <td>Portugal</td>
+                            </tr>
+                            <tr>
+                              <td>November 2022 - July 2023</td>
+                              <td>Audiovisual Resources Center Contributor</td>
+                              <td>EsAcT-IPB</td>
+                              <td>Campus do Cruzeiro, Av. 25 de Abril Lote 2, 5370-202 Mirandela</td>
+                              <td>Portugal</td>
+                            </tr>
+                            <tr>
+                              <td>November 2019 - November 2021</td>
+                              <td>Assistant technician</td>
+                              <td>DZE PRODUTORA AUDIOVISUAL E EVENTOS SOC. UNIPESSOAL, LDA</td>
+                              <td>Mindelo</td>
+                              <td>Cabo Verde</td>
+                            </tr>
+                            <tr>
+                              <td>May 2021 - July 2021</td>
+                              <td>Trainee</td>
+                              <td>Isaackriolmidia</td>
+                              <td>Mindelo</td>
+                              <td>Cabo Verde</td>
+                            </tr>
+                          </table>
+                        <!--<ul>
+                            <li><span>2023 - Current</span><br>Collaborator at  Audiovisual Resource Center, at the School of Communication, Administration and Tourism - Bragança Polytechnic Institute</li>
+                            <li><span>2021 - 2022</span><br>Collaborator at library at the School of Communication, Administration and Tourism - Polytechnic Institute of Bragança</li>
+                            <li><span>2019 - 2021</span><br>At DZE PRODUTORA I worked as technical assistant (Microphonist, camera assistant, still photographer, camera B)</li>
+                            <li><span>2020 - 2021</span><br>At Isaackriolmid I worked as a trainee (Camera, audio capturing, image editing in Adobe Photoshop and Premiere).</li>
+                        </ul>-->
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <table>
+                            <tr style="background-color: #fd8505; color: #fff;">
+                              <th>Year</th>
+                              <th>Course area</th>
+                              <th>School name</th>
+                              <th>Location</th>
+                              <th>Country</th>
+                            </tr>
+                            <tr>
+                              <td>2021 - Current</td>
+                              <td>Multimedia Course</td>
+                              <td>School of Communication, Administration and Tourism - Polytechnic Institute of Bragança</td>
+                              <td>Campus do Cruzeiro, Av. 25 de Abril Lote 2, 5370-202 Mirandela</td>
+                              <td>Portugal</td>
+                            </tr>
+                              <td>November 2019 - November 2021</td>
+                              <td>Technical course in Graphic Arts</td>
+                              <td>Mindelo-Guilherme Dias Chantres Industrial and Commercial School</td>
+                              <td>Mindelo</td>
+                              <td>Cabo Verde</td>
+                            </tr>
+                          </table>
+                        <!--<ul>
+                            <li><span>2023</span><br>Multimedia Course at School of Communication, Administration and Tourism - Polytechnic Institute of Bragança</li>
+                            <li><span>2019 - 2021</span><br>Technical course in Graphic Arts at the Mindelo-Guilherme Dias Chantres Industrial and Commercial School</li>
+                        </ul>-->
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------service------------ 
+<div id="services">
+    <div class="container">
+        <h1 class="sub-titlte">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-pencil"></i>
+                <h2>Design Graphic</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At sequi cupiditate possimus dolorum aut atque, fugit doloribus nesciunt maiores dolor. 
+                Magni, expedita iste magnam nobis dolores quis nisi omnis voluptates.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-video"></i>
+                <h2>Video Maker</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At sequi cupiditate possimus dolorum aut atque, fugit doloribus nesciunt maiores dolor. 
+                Magni, expedita iste magnam nobis dolores quis nisi omnis voluptates.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-camera"></i>
+                <h2>Photographer</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At sequi cupiditate possimus dolorum aut atque, fugit doloribus nesciunt maiores dolor. 
+                Magni, expedita iste magnam nobis dolores quis nisi omnis voluptates.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- --------- Circular Progress Bars ------------ 
+<h1 class="title">Skill</h1>
+<div class="space" style="height: 20vh;"></div>
+<section class="circles">
+    <div class="circle" data-prog="95">
+        <svg width="250" height="250">
+            <circle
+            r="100"
+            cx="125"
+            cy="125"
+            class="track"
+            >
+            </circle>
+            <circle
+            r="100"
+            cx="125"
+            cy="125"
+            class="progress"
+            >
+            </circle>
+        </svg>
+        <div class="circle-inner">
+            <h1>95%</h1>
+            <h6>Graphic Design</h6>
+        </div>
+    </div>
+    <div class="circle" data-prog="85">
+        <svg width="250" height="250">
+            <circle
+            r="100"
+            cx="125"
+            cy="125"
+            class="track"
+            >
+            </circle>
+            <circle
+            r="100"
+            cx="125"
+            cy="125"
+            class="progress"
+            >
+            </circle>
+        </svg>
+        <div class="circle-inner">
+            <h1>85%</h1>
+        </div>
+    </div>
+    <div class="circle" data-prog="78">
+        <svg width="250" height="250">
+            <circle
+            r="100"
+            cx="125"
+            cy="125"
+            class="track"
+            >
+            </circle>
+            <circle
+            r="100"
+            cx="125"
+            cy="125"
+            class="progress"
+            >
+            </circle>
+        </svg>
+        <div class="circle-inner">
+            <h1>78%</h1>
+        </div>
+    </div>
+</section>
+
+<div class="space" style="height: 20em;"></div>-->
+
+<script>
+    const circleSection = document.querySelector('.circles');
+const circles = document.querySelectorAll('.circle');
+const progressCircles = document.querySelectorAll('.progress');
+const progressText = document.querySelectorAll('.circles h1');
+
+let bol = false;
+
+//Add on scroll event listener
+window.addEventListener("scroll", function(){
+    //run when the scroll offset is 600px and run only once
+    if (pageYOffset > circleSection.offsetTop - 600 && bol === false){
+        //select all circles
+        for(let i = 0; i < circles.length; i++){
+            //get the radius of the circles
+            let radius = progressCircles[i].r.baseVal.value;
+
+            //get the circumference of the circle
+            let circumference = radius * 2 * Math.PI;
+
+            //set stroke dasharray to circumference
+            progressCircles[i].style.strokeDasharray = circumference;
+
+            //set stroke dash offset between a scale from 0 to 100
+            function setProgress(percent){
+                progressCircles[i].style.strokeDashoffset =
+                 circumference - (percent / 100) * circumference;
+            }
+
+            //get data attribute values
+            const progress = circles[i].dataset.prog;
+
+            //add progress text dinamically
+            progressText[i].innerHTML = progress + "%";
+
+            //call the 'setProgress' function
+            setProgress(progress);
+
+            /* by setting the bol variable to true
+            we stop the above code from runing
+            over and over again*/
+            bol = true;
+        }
+    }
+})
+</script>
+
+
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Graphic Design</h3>
+                    <p>Graphic designer creates attractive and impactful visual solutions, 
+                    combining art, typography, and layout to convey effective messages.</p>
+                    <a href="Portfolio_graphicDesign.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Video Maker</h3>
+                    <p>Video Maker creates attractive andimpactful visual solutions, 
+                    combining video,transitions and music to streammessages.</p>
+                    <a href="Portfolio_VideoMaker.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Photographer</h3>
+                    <p>Photographer creates attractive and impactful visual solutions, 
+                    combining scenes,light and emotion to convey messages.</p>
+                    <a href="Portfolio_photographer.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------contacto------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h7 class="sub-title">Contact Me</h7   >
+                <p><i class="fa-solid fa-paper-plane"></i>marcelo.jc.duarte@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+351 924 467 878</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/a49449"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/xoia_md"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/marcelo-duarte-96335623b/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/Marcelo_Duarte_CV (1).pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Number" placeholder="Your Number" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright 2024 © <span>Marcelo Duarte</span> <i class="fa-solid fa-thumbs-up"></i></p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px"
+    }
+    
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzvJHulqURMfrlJdbNoXEP8JPzMmI6Rr7jixwON1KMg2WKqwjzWic7zDZgqJJxdcFs_/exec'
+    
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+</script>
+</body>
+</html>

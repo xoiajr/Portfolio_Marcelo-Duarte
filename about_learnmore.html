@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelo Portfolio </title>
+    <link rel="website icon" type="png" 
+    href="images/icon.png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b06a64126b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/17a4ab0a51.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="google sheets.js">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="images/logo.png" class="logo"></a>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="container1">
+            <main class="row">
+                <!-- ----------skills------------ -->
+     
+                <section class="col">
+                 <header class="title">
+                     <h2>SKILLS</h2>
+                 </header>
+     
+                 <div class="contents">
+     
+                     <div class="box">
+                         <h4>2019 - 2023</h4>
+                         <h3>Design Graphic</h3>
+                         <p>Branding, Layout Design, Image Editing, Vector Graphics.</p>
+                     </div>
+     
+                     <div class="box">
+                         <h4>2019 - 2023</h4>
+                         <h3>Video Maker</h3>
+                         <p>Video Editing, Video Production, Video Marker.</p>
+                     </div>
+     
+                     <div class="box">
+                         <h4>2019 - 2023</h4>
+                         <h3>Photographer</h3>
+                         <p>Publication Design, Social Media Graphic, Portfolio Design, Photo Editing, Image Retouching, Color Correction.</p>
+                     </div>
+     
+                 </div>
+                </section>
+     
+                <!-- ----------experience------------ -->
+                <section class="col">
+     
+                 <header class="title">
+                     <h2>EXPERIENCE</h2>
+                 </header>
+     
+                 <div class="contents">
+                     <div class="box">
+                         <h4>2023 - Current</h4>
+                         <h3>Collaborator at  Audiovisual Resource Center, at the School of Communication, Administration and Tourism - Bragança Polytechnic Institute</h3>
+                         <p></p>
+                     </div>
+     
+                     <div class="box">
+                         <h4>2021 - 2022</h4>
+                         <h3>Collaborator at library at the School of Communication, Administration and Tourism - Polytechnic Institute of Bragança</h3>
+                         <p></p>
+                     </div>
+     
+                     <div class="box">
+                         <h4>2019 - 2021</h4>
+                         <h3>DZE PRODUTORA</h3>
+                         <p>I worked as technical assistant (Microphonist, camera assistant, still photographer, camera B).</p>
+                     </div>
+     
+                     <div class="box">
+                         <h4>2020 - 2021</h4>
+                         <h3>Isaackriolmidia</h3>
+                         <p>I worked as a trainee (Camera, audio capturing, image editing in Adobe Photoshop and Premiere).</p>
+                     </div>
+     
+                 </div>
+                </section>
+
+                <section class="col">
+     
+                    <header class="title">
+                        <h2>EDUCATION</h2>
+                    </header>
+        
+                    <div class="contents">
+                        <div class="box">
+                            <h4>2021 - Current</h4>
+                            <h3>Multimedia Course at School of Communication, Administration and Tourism - Polytechnic Institute of Bragança.</h3>
+                            <p>Communication Design, Fundamentals of Mathematics,
+                                Introduction to Programming, Object Oriented Programming,
+                                Database, Design Project, Audio Lab,
+                                Video Laboratory, Animation Laboratory, Organizational
+                                Communication, Interface Design.</p>
+                        </div>
+        
+                        <div class="box">
+                            <h4>2019 - 2021</h4>
+                            <h3>Technical course in Graphic Arts at the Mindelo-Guilherme Dias Chantres Industrial and Commercial School</h3>
+                            <p>History of Art, Workshop and Laboratory Practices in the Arts
+                                Graphics, Applied Informatics, Mathematics, Physics/Chemistry,
+                                Descriptive Geometry, Drawing, Portuguese, English and French.</p>
+                        </div>
+                    </div>
+                   </section>
+             </main>
+             <div class="copyright">
+                <p>copyright 2023 © <span>Marcelo Duarte</span> <i class="fa-solid fa-thumbs-up"></i></p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var sidemeu = document.getElementById("sidemenu");
+    
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px"
+        }
+        
+    </script>
+
+</body>
+</html>

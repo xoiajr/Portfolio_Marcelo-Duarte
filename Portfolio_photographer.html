@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelo Portfolio</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="Portfolio_photographer.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b06a64126b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/17a4ab0a51.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="google sheets.js">
+</head>
+<body>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+        <h5>↑</h5>
+    </button>
+
+    <script>
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        window.onscroll = function() {
+            showScrollToTopButton();
+        };
+
+        function showScrollToTopButton() {
+            var btn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+    </script>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="images/logo.png" class="logo"></a>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="container1">
+                <div class="space" style="height: 5vh;"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="image image-transition"><img src="images/1.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition"><img src="images/1.1.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition"><img src="images/1.2.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition"><img src="images/1.3.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/3.1.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/3.3.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/3.2.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/3.7.jpg" onclick="FullView(this.scr)"></div>
+                    </div>
+                    <div class="col">
+                        <div class="image image-transition"><img src="images/2.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition"><img src="images/2.1.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition"><img src="images/2.4.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition"><img src="images/2.5.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition"><img src="images/2.6.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition"><img src="images/2.7.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/IMG_0067.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/IMG_0179.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/IMG_0098.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/IMG_0075.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/IMG_0180.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/IMG_0087.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/IMG_0079.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/IMG_0149.jpg" onclick="FullView(this.scr)"></div>
+                    </div>
+                    <div class="col">
+                        <div class="image image-transition"><img src="images/1.7.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition"><img src="images/1.9.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition"><img src="images/1.10.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition"><img src="images/1.11.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/3.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/3.5.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/3.6.jpg" onclick="FullView(this.scr)"></div>
+                        <div class="image image-transition hidden"><img src="images/3.4.jpg" onclick="FullView(this.scr)"></div>
+                    </div>
+                </div>
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <div class="col">
+                        <img src="images/1.jpg">
+                    </div>
+                </div>
+                <a href="#" class="btn" onclick="showMoreImages()">See more</a>
+                <div class="copyright">
+                    <p>copyright 2023 © <span>Marcelo Duarte</span> <i class="fa-solid fa-thumbs-up"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+
+        document.querySelectorAll('.row img').forEach(image => {
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            };
+        });
+
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';
+        };
+
+        function showMoreImages() {
+            let hiddenImages = document.querySelectorAll('.col .hidden');
+
+            hiddenImages.forEach(image => {
+                image.classList.remove('hidden');
+                image.parentElement.classList.add('image-transition'); // Adiciona a classe de transição à div pai
+            });
+
+            // Oculta o botão "See more" após mostrar todas as imagens
+            document.querySelector('.btn').style.display = 'none';
+        }
+    </script>
+
+    <script src="portfolio_photographer.js"></script>
+</body>
+</html>

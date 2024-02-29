@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+
+}
+
+*:focus{
+    outline: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 15px 8%;
+}
+
+.container1{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 10px;
+    gap: 50px;
+    margin-top: 3%;
+    margin-left: -35px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fd8505;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.header-text h1 span{
+    color: #fd8505;
+}
+
+.copyright{
+    text-align: center;
+    margin-left: 950px;
+    width: 100%;
+    padding: 25px 0;
+    background: transparent #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright p{
+    color: #fd8505;
+}
+
+.col .video{
+    border-radius: 5px;
+    border: 1px solid #fd8505;
+    cursor: pointer;
+    /*transition:  0.5s linear;*/
+}
+
+.col .video:hover{
+    box-shadow: 0px 3px 15px 0px #fd8505;
+    border: 4px solid #fd8505;;
+}
+
+.col1 .video{
+    border-radius: 5px;
+    border: 1px solid #fd8505;
+    cursor: pointer;
+    /*transition:  0.5s linear;*/
+}
+
+.col1 .video:hover{
+    box-shadow: 0px 3px 15px 0px #fd8505;
+    border: 4px solid #fd8505;
+}
+
+.col2 .video{
+    border-radius: 5px;
+    border: 1px solid #fd8505;
+    cursor: pointer;
+    /*transition:  0.5s linear;*/
+}
+
+.col2 .video:hover{
+    box-shadow: 0px 3px 15px 0px #fd8505;
+    border: 4px solid #fd8505;
+}
+
+
+
+/*------- criar a grelha dos videos -----*/
+.row{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+.col{
+    width: 100%;
+    background-size: cover;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: -10px;
+}
+.col1{
+    width: 150%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.col2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #fd8505;
+    padding: 18px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+    margin-right: -380px;
+}
+.btn:hover{
+    background: #fd8505;
+}
+
+.video.hidden {
+    display: none;
+}
+
+.video-transition {
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+/*------Scroll to top -------*/
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fd8505;
+    color: #000;
+    border: none;
+    border-radius: 50%; /* Alterado para criar um botão em forma de círculo */
+    width: 40px;
+    height: 40px;
+}
+
+h5{
+    font-size: 40px; /* Aumentado o tamanho da fonte para a seta ser mais visível */
+    line-height: 40px; /* Garante que a seta permaneça centralizada verticalmente */
+    margin-top: -5px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/*---------css for small screens ----------*/
+nav .fa-solid{
+    display: none;
+}
+@media screen and (max-width:600px){
+    .row{
+        flex-direction: column;
+    }
+    .container1 .popup-image img{
+        width: 80%;
+    }
+
+    .col, .col1, .col2{
+        width: 290%;
+        margin-left: 60px;
+    }
+
+    .col1{
+        width: 290%;
+    }
+
+    nav .fa-solid{
+        display: inline-block;
+        font-size: 25px ;
+    }
+    nav ul{
+        background: #fd8505;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul li a::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+    }
+    
+    nav ul li a:hover::after{
+        width: 100%;
+    }
+    .copyright{
+        text-align: center;
+        font-size: 14px;
+        margin-left: 350px;
+    }
+    .btn{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+}
